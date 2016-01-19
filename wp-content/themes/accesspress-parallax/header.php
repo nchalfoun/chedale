@@ -19,6 +19,11 @@
 	<script src="<?php echo get_template_directory_uri(); ?>/js/html5shiv.js"></script>
 <![endif]-->
 
+<meta property="og:url" content="http://chedale.com.ar"/>
+<meta property="og:title" content="cheDALE! Spanish School"/>
+<meta property="og:description" content="THE REAL SPANISH LANGUAGE EXPERIENCE"/>
+<meta property="og:image" content="http://chedale.com.ar/wp-content/uploads/2016/01/og-image.jpg"/>
+
 <?php wp_head(); ?>
 </head>
 
