@@ -1,17 +1,10 @@
 ---
 layout: style
 ---
-.carousel,
-.item,
-.active {
-    height: 100%;
-}
 
 .carousel-inner {
     height: 100%;
 }
-
-/* Background images are set within the HTML using inline CSS, not here */
 
 .fill {
     width: 100%;
