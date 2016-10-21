@@ -4,7 +4,7 @@ baseurl: /chedale
 # Site settings
 title: cheDALE! Spanish School
 email: hola@chedale.com.ar
-description: "cheDALE! Spnish School"
+description: "cheDALE! Spanish School"
 
 
 # Team names, titles and social links
@@ -45,7 +45,7 @@ people:
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
   - title: twitter
-    url: http://twitter.com/jekyllrb
+    url: http://twitter.com/chedale.spanish
   - title: facebook
     url: https://www.facebook.com/chedale.spanish
 

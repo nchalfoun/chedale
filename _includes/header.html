@@ -1,101 +1,55 @@
-<!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top" style="padding: 0">
-                <img src="{{ site.baseurl }}/img/logo.png"></img></a>
-            </div>
+<!-- Header -->
+<header id="home-slider" class="carousel slide">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#home-slider" data-slide-to="0" class="active"></li>
+        <li data-target="#home-slider" data-slide-to="1"></li>
+        <li data-target="#home-slider" data-slide-to="2"></li>
+    </ol>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#services">Services</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#portfolio">Courses</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#about">About</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#team">Team</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
-                    </li>
-                    <li>
-                        <a href="/blog">Blog</a>
-                    </li>
-                    <li>
-                        <a href="/campus">Campus</a>
-                    </li>
-                </ul>
+    <!-- Wrapper for Slides -->
+    <div class="carousel-inner">
+        {% for sliderItem in site.categories.slider %}
+        <div class="item active">
+            <!-- Set the first background image using inline CSS below. -->
+            <div class="fill" style="background-image:url('{{ site.baseurl }}/{{ sliderItem.image }}');"></div>
+            <div class="carousel-caption">
+                <h1>{{ sliderItem.title }}</h1>
+                <h4>{{ sliderItem.content }}</h4>
             </div>
-            <!-- /.navbar-collapse -->
         </div>
-        <!-- /.container-fluid -->
-    </nav>
+        {% endfor %}
 
-    <!-- Header -->
-    <header id="home-slider" class="carousel slide">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                <li data-target="#home-slider" data-slide-to="0" class="active"></li>
-                <li data-target="#home-slider" data-slide-to="1"></li>
-                <li data-target="#home-slider" data-slide-to="2"></li>
-            </ol>
-
-            <!-- Wrapper for Slides -->
-            <div class="carousel-inner">
-              <div class="item active">
-                  <!-- Set the first background image using inline CSS below. -->
-                  <div class="fill" style="background-image:url('{{ site.baseurl }}/img/slider/1.jpg');"></div>
-                  <div class="carousel-caption">
-                      <h1>A SPANISH LESSON FOR YOUR EVERY NEED</h1>
-                      <h4>At cheDALE! we have a Spanish lesson designed especially for you.</h4>
-                  </div>
-              </div>
-              <div class="item">
-                  <!-- Set the second background image using inline CSS below. -->
-                  <div class="fill" style="background-image:url('{{ site.baseurl }}/img/slider/2.jpg');"></div>
-                  <div class="carousel-caption">
-                    <h1>SPECIAL COURSES</h1>
-                    <h4>Spanish for Diplomats. Courses in office or at home.<br>
+        <div class="item">
+            <!-- Set the second background image using inline CSS below. -->
+            <div class="fill" style="background-image:url('{{ site.baseurl }}/img/slider/2.jpg');"></div>
+            <div class="carousel-caption">
+                <h1>SPECIAL COURSES</h1>
+                <h4>Spanish for Diplomats. Courses in office or at home.<br>
                     Specific training for those working internationally in public and NGO sectors and their families.
-    </h4>
-                  </div>
-              </div>
-              <div class="item">
-                  <!-- Set the third background image using inline CSS below. -->
-                  <div class="fill" style="background-image:url('{{ site.baseurl }}/img/slider/3.jpg');"></div>
-                  <div class="carousel-caption">
-                      <h1>INDIVIDUAL AND GROUP LESSONS</h1>
-                      <h4>Improve your grammar skills  learning the language
-    just how YOU need it.</h4>
-                  </div>
-              </div>
+                </h4>
             </div>
+        </div>
+        <div class="item">
+            <!-- Set the third background image using inline CSS below. -->
+            <div class="fill" style="background-image:url('{{ site.baseurl }}/img/slider/3.jpg');"></div>
+            <div class="carousel-caption">
+                <h1>INDIVIDUAL AND GROUP LESSONS</h1>
+                <h4>Improve your grammar skills learning the language
+                    just how YOU need it.</h4>
+            </div>
+        </div>
+    </div>
 
-            <!-- Controls -->
-            <a class="left carousel-control" href="#home-slider" data-slide="prev">
-                <span class="icon-prev"></span>
-            </a>
-            <a class="right carousel-control" href="#home-slider" data-slide="next">
-                <span class="icon-next"></span>
-            </a>
+    <!-- Controls -->
+    <a class="left carousel-control" href="#home-slider" data-slide="prev">
+        <span class="icon-prev"></span>
+    </a>
+    <a class="right carousel-control" href="#home-slider" data-slide="next">
+        <span class="icon-next"></span>
+    </a>
 
-        </header>
+</header>
 <!--
         {% for page in site.pages %}
           {% if page.title %}<a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>{% endif %}
